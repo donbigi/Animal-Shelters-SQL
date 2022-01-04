@@ -1,3 +1,4 @@
+-- Analysis of costs to run animal shelters
 WITH no_sponsored AS -- Creating a CTE table to remove all sponsored animal from selection
 	(
 	SELECT animalid,
