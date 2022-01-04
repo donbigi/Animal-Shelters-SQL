@@ -1,6 +1,6 @@
 -- Analysis of costs to run animal shelters
--- Uploading csv files to postgreeSQL
 
+-- Uploading csv files to postgreeSQL
 DROP TABLE IF EXISTS "animals";
 DROP TABLE IF EXISTS "age_costs";
 DROP TABLE IF EXISTS "location_costs";
@@ -48,8 +48,8 @@ copy age_costs FROM 'age_costs.csv' DELIMITER ',' CSV HEADER;
 copy location_costs FROM 'location_costs.csv' DELIMITER ',' CSV HEADER;
 copy size_costs FROM 'size_costs.csv' DELIMITER ',' CSV HEADER;
 
-
-WITH no_sponsored AS -- Creating a CTE table to remove all sponsored animal from selection
+-- Creating a CTE table to remove all sponsored animal from selection
+WITH no_sponsored AS
 	(
 	SELECT animalid,
 		sponsorid,
@@ -84,7 +84,7 @@ WITH no_sponsored AS -- Creating a CTE table to remove all sponsored animal from
 	GROUP BY no_sponsored.animaltype, size -- grouping table by animal type, then by size 
 	)
 
--- selecting result from CTE table
+-- Selecting result from CTE table
 SELECT animaltype,
 	   size,
 	   total,
