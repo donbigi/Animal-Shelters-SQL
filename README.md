@@ -1,5 +1,5 @@
-# Animal-Shelters--SQL-Certification
-## 1. Analysis of costs to run animal shelters
+# Animal-Shelters--SQL
+## Analysis of costs to run animal shelters
 <p>You are working as a data analyst in the animal welfare department. In preparation for next year's budget, the head of your department would like to know the total cost to shelter animals, broken down by each animal type and size combination (i.e., 'small dogs', 'large dogs', etc.). You need to prepare a table that contains this information.</p>
 <p>The total cost to shelter an animal for the year is calculated as the sum of three factors: the size and animal type, the age, and the location.</p>
 <ul>
