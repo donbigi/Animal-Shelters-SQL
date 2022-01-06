@@ -68,7 +68,7 @@ WITH no_sponsored AS
 			WHEN animals.animaltype = 'Bird' AND weight > 1.1 THEN 'BL'
 			WHEN animals.animaltype = 'Bird' AND (weight > 0.7 OR weight <= 1.1) THEN 'DM'
 		END AS sizeid -- created foriegn key 'sizeid' to join size_costs table
-    FROM animals 
+    	FROM animals 
 	LEFT JOIN sponsored_animals ON animals.animalid = sponsored_animals.sponsorid -- joining sponsored table
 	WHERE sponsorid IS NULL -- removing all sponsored animal from the result
 	);
