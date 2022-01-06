@@ -71,7 +71,7 @@ WITH no_sponsored AS
     FROM animals 
 	LEFT JOIN sponsored_animals ON animals.animalid = sponsored_animals.sponsorid -- joining sponsored table
 	WHERE sponsorid IS NULL -- removing all sponsored animal from the result
-	),
+	);
 	calculation_table AS -- CTE table to hold calculations
 	(
 	SELECT no_sponsored.animaltype,
